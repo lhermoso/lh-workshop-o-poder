@@ -4,19 +4,19 @@ import { CTAButton } from './CTAButton';
 
 export const WorkshopDetails: React.FC = () => {
     return (
-        <section className="section bg-white">
+        <section className="section bg-background-alt">
             <div className="container-wide">
                 <h2 className="section-header">VEJA O QUE VOCÊ VAI <span className="text-primary">APRENDER NESSE WORKSHOP</span></h2>
 
                 <div className="grid md:grid-cols-2 gap-16 mt-16">
                     <div className="flex flex-col md:flex-row gap-8 items-start">
                         <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mx-auto md:mx-0">
-                            <span className="text-text text-3xl font-bold">1</span>
+                            <span className="text-background text-3xl font-bold">1</span>
                         </div>
                         <div>
-                            <h3 className="text-2xl font-bold mb-4 text-center md:text-left">Primeira Parte</h3>
-                            <h4 className="text-xl font-semibold mb-4 text-center md:text-left">O que você vai aprender?</h4>
-                            <p className="text-lg text-gray-700">
+                            <h3 className="text-2xl font-bold mb-4 text-center md:text-left text-text">Primeira Parte</h3>
+                            <h4 className="text-xl font-semibold mb-4 text-center md:text-left text-primary">O que você vai aprender?</h4>
+                            <p className="text-lg text-text/80">
                                 <strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                             </p>
                         </div>
@@ -44,12 +44,12 @@ export const WorkshopDetails: React.FC = () => {
 
                     <div className="flex flex-col md:flex-row gap-8 items-start order-1 md:order-2">
                         <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mx-auto md:mx-0">
-                            <span className="text-text text-3xl font-bold">2</span>
+                            <span className="text-background text-3xl font-bold">2</span>
                         </div>
                         <div>
-                            <h3 className="text-2xl font-bold mb-4 text-center md:text-left">Segunda Parte</h3>
-                            <h4 className="text-xl font-semibold mb-4 text-center md:text-left">O que você vai aprender?</h4>
-                            <p className="text-lg text-gray-700">
+                            <h3 className="text-2xl font-bold mb-4 text-center md:text-left text-text">Segunda Parte</h3>
+                            <h4 className="text-xl font-semibold mb-4 text-center md:text-left text-primary">O que você vai aprender?</h4>
+                            <p className="text-lg text-text/80">
                                 <strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                             </p>
                         </div>
