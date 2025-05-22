@@ -9,7 +9,7 @@ export const ProfilesSection: React.FC = () => {
 
                 <div className="flex flex-col md:flex-row gap-12 items-center justify-center mt-12">
                     <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden shadow-xl">
-                        <Image
+                          <Image
                             src="/images/leo-hermoso.png"
                             alt="Léo Hermoso"
                             fill

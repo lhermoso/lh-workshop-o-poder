@@ -9,6 +9,7 @@ import { WorkshopDetails } from '@/components/WorkshopDetails';
 import { GuaranteeSection } from '@/components/GuaranteeSection';
 import { PricingSection } from '@/components/PricingSection';
 import { Footer } from '@/components/Footer';
+import MarketSection from "@/components/MarketSection";
 
 export default function Home() {
   // Analytics and optimization setup
@@ -85,6 +86,7 @@ export default function Home() {
     <main className="antialiased">
       <Header />
       <Hero />
+      <MarketSection />
       <ProfilesSection />
       <WorkshopContent />
       <WorkshopDetails />
