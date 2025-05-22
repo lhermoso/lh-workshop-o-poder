@@ -23,7 +23,7 @@ export const PricingSection: React.FC = () => {
                                 <div className="flex flex-col md:flex-row gap-8 items-center">
                                     <div className="relative w-full md:w-1/2 h-64">
                                         <Image
-                                            src="/images/workshop-banner.jpg"
+                                            src="/images/workshop-crypto.png"
                                             alt="Workshop O Poder da Terceira Linha"
                                             fill
                                             className="object-cover rounded-xl"
