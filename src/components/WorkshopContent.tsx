@@ -1,6 +1,5 @@
 import React from 'react';
 import { CTAButton } from './CTAButton';
-import Image from 'next/image';
 
 export const WorkshopContent: React.FC = () => {
     return (

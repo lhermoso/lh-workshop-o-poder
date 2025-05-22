@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const HeroSection: React.FC = () => {
   return (
-    <div className="elementor-element elementor-element-27b3631f e-flex e-con-boxed e-con e-parent bg-gradient-to-br from-[#111] to-[#333] text-white" data-id="27b3631f" data-element_type="container" data-settings="{\" background_background\":\"classic\"}" >
+    <div className="elementor-element elementor-element-27b3631f e-flex e-con-boxed e-con e-parent bg-gradient-to-br from-[#111] to-[#333] text-white" data-id="27b3631f" data-element_type="container" data-settings='{"background_background":"classic"}'>
       <div className="e-con-inner container-custom py-16 md:py-20">
         <div className="elementor-element elementor-element-68576b4b e-con-full e-flex e-con e-child md:flex items-center gap-8" data-id="68576b4b" data-element_type="container">
           {/* Image Column */}
@@ -80,7 +80,7 @@ const HeroSection: React.FC = () => {
           </div>
         </div>
       </div>
-    </div >
+    </div>
   );
 };
 
