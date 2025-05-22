@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import { Inter, Montserrat, Orbitron } from "next/font/google";
 import "./globals.css";
 import React from 'react';
+import { ThemeProvider } from '@/contexts/ThemeContext';
 import { GoogleAnalytics, FacebookPixel, StructuredData } from '@/components/ScriptHead';
+
 
 // Google Analytics ID - replace with your actual ID in production
 const GA_MEASUREMENT_ID = 'G-XXXXXXXXXX';
@@ -82,10 +84,37 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
       </head>
-      <body className="antialiased">
-        <div className="min-h-screen flex flex-col">
-          {children}
-        </div>
+      <body className="antialiased bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                function setTheme(newTheme) {
+                  window.__theme = newTheme;
+                  if (newTheme === 'dark') {
+                    document.documentElement.classList.add('dark');
+                  } else {
+                    document.documentElement.classList.remove('dark');
+                  }
+                  localStorage.setItem('theme', newTheme);
+                }
+                let theme = localStorage.getItem('theme');
+                const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+                if (!theme && prefersDark) {
+                  theme = 'dark';
+                }
+                // Default to dark if no preference or stored theme.
+                // You can change 'dark' to 'light' if you want light to be the absolute default.
+                setTheme(theme || 'dark');
+              })();
+            `,
+          }}
+        />
+        <ThemeProvider>
+          <div className="min-h-screen flex flex-col">
+            {children}
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );

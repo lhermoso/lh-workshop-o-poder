@@ -1,9 +1,10 @@
 import React from 'react';
 import { CTAButton } from './CTAButton';
+import { ThemeToggleButton } from './ThemeToggleButton';
 
 export const Header: React.FC = () => {
   return (
-    <header className="bg-background/80 backdrop-blur-md border-b border-primary/10 text-text py-4 sticky top-0 z-50">
+    <header className="bg-background/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-primary/10 dark:border-gray-700/50 text-text dark:text-gray-100 py-4 sticky top-0 z-50 transition-colors duration-300">
       <div className="container-wide">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <h1 className="text-2xl font-bold mb-4 md:mb-0 flex items-center">
@@ -21,9 +22,12 @@ export const Header: React.FC = () => {
                 </defs>
               </svg>
             </div>
-            <span className="crypto-gradient-text">O Poder da</span> <span className="text-text">Terceira Linha</span>
+            <span className="crypto-gradient-text">O Poder da</span> <span className="text-text dark:text-gray-200">Terceira Linha</span>
           </h1>
-          <CTAButton />
+          <div className="flex items-center space-x-4">
+            <ThemeToggleButton />
+            <CTAButton />
+          </div>
         </div>
       </div>
     </header>
