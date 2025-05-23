@@ -1,17 +1,20 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 
 export const PricingSection: React.FC = () => {
     const [isLoading, setIsLoading] = useState(false);
     const router = useRouter();
+    const searchParams = useSearchParams();
 
     const handlePurchase = () => {
         setIsLoading(true);
         // Brief loading state for UX
         setTimeout(() => {
             setIsLoading(false);
-            router.push('https://chk.eduzz.com/E9OO6PXQ9B?utm_source=insta');
+            // Get utm_source from current URL, default to 'insta'
+            const utmSource = searchParams.get('utm_source') || 'insta';
+            router.push(`https://chk.eduzz.com/E9OO6PXQ9B?utm_source=${utmSource}`);
         }, 300);
     };
 
