@@ -44,7 +44,7 @@ export const Hero: React.FC = () => {
                             </div>
                             <div className="flex flex-col md:flex-row gap-4 text-lg glass-effect p-4 backdrop-blur text-gray-700 dark:text-gray-200">
                                 <div className="flex items-center gap-2">
-                                    <div className="w-6 h-6 rounded-full bg-success flex items-center justify-center text-background-dark font-bold">✓</div>
+                                    <div className="w-6 h-auto rounded-full bg-success flex items-center justify-center text-background-dark font-bold">✓</div>
                                     <span>Dias 29 de MAIO</span>
                                 </div>
                                 <div className="flex items-center gap-2">
@@ -64,7 +64,7 @@ export const Hero: React.FC = () => {
                         digital effects if replacement is not immediately available. */}
                         <div className="absolute inset-0 z-0 rounded-full bg-gradient-to-r from-primary/30 to-accent/30 blur-3xl transform -translate-x-1/4 -translate-y-1/4"></div>
                         <Image
-                            src="/images/workshop-crypto.png"
+                            src="/images/crypto-hero.png"
                             alt="Estratégia de Pool de Liquidez"
                             fill
                             className="object-contain relative z-10"

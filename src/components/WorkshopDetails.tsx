@@ -16,31 +16,31 @@ export const WorkshopDetails: React.FC = () => {
                             </div>
                             <div>
                                 <h3 className="text-2xl font-bold mb-4 text-center md:text-left text-gray-800 dark:text-white">Primeira Parte</h3>
-                                <h4 className="text-xl font-semibold mb-4 text-center md:text-left text-primary dark:text-primary-dark">O que você vai aprender?</h4>
+                                <h4 className="text-xl font-semibold mb-4 text-center md:text-left text-primary dark:text-primary-dark">Pool de Liquidez e seus princípios</h4>
                                 <p className="text-lg text-gray-600 dark:text-gray-300">
-                                    <strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                                </p>
+                                    <strong>Onde estão as oportunidades</strong> e onde elas costumam falhar. Já no primeiro instante, você vai aprender as duas formas de usar pools de liquidez para melhorar a entrada e saída das posições, otimizando seus trades e minimizando riscos. Aprofundaremos nos critérios de sucesso e nos erros mais comuns para que você possa navegar neste universo com mais confiança e estratégia.
+</p>
                             </div>
                         </div>
                     </div>
 
-                    <div className="relative h-80 md:h-auto rounded-xl overflow-hidden shadow-lg glow-on-hover">
+                    <div className="relative h-80 md:h-full rounded-xl overflow-hidden shadow-lg glow-on-hover">
                         <Image
-                            src="/images/workshop-crypto.png"
+                            src="/images/primeiro-dia.png"
                             alt="Léo Hermoso Workshop Parte 1"
                             fill
-                            className="object-cover"
+                            className="object-contain"
                         />
                     </div>
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-16 mt-24 items-center">
-                    <div className="relative h-80 md:h-auto rounded-xl overflow-hidden shadow-lg order-2 md:order-1 glow-on-hover">
+                    <div className="relative h-80 md:h-full rounded-xl overflow-hidden shadow-lg order-2 md:order-1 glow-on-hover">
                         <Image
-                            src="/images/leo-hermoso.png"
+                            src="/images/segundo-dia.png"
                             alt="Léo Hermoso Workshop Parte 2"
                             fill
-                            className="object-cover"
+                            className="object-contain"
                         />
                     </div>
 
@@ -51,10 +51,10 @@ export const WorkshopDetails: React.FC = () => {
                             </div>
                             <div>
                                 <h3 className="text-2xl font-bold mb-4 text-center md:text-left text-gray-800 dark:text-white">Segunda Parte</h3>
-                                <h4 className="text-xl font-semibold mb-4 text-center md:text-left text-primary dark:text-primary-dark">O que você vai aprender?</h4>
+                                <h4 className="text-xl font-semibold mb-4 text-center md:text-left text-primary dark:text-primary-dark">Sobreposição de faixas a fundo</h4>
                                 <p className="text-lg text-gray-600 dark:text-gray-300">
-                                    <strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                                </p>
+                                    Todos os problemas que essa estratégia resolve e a sua implementação correta. Você entenderá como a <strong>sobreposição de faixas</strong> pode mitigar falhas comuns e otimizar a performance. Abordaremos desde a <strong>teoria</strong> por trás da técnica até as <strong>melhores práticas</strong> para sua aplicação, garantindo resultados consistentes e a superação de desafios operacionais.
+                                    </p>
                             </div>
                         </div>
                     </div>
