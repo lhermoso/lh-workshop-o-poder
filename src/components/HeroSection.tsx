@@ -48,7 +48,7 @@ const HeroSection: React.FC = () => {
                     <span className="elementor-icon-list-icon">
                       <svg aria-hidden="true" className="e-font-icon-svg e-fas-check-circle w-5 h-5 text-[#d8613c]" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg>
                     </span>
-                    <span className="elementor-icon-list-text">Dia 31 de MAIO</span>
+                    <span className="elementor-icon-list-text">Dia 07 de Junho</span>
                   </li>
                   <li className="elementor-icon-list-item flex items-center gap-3">
                     <span className="elementor-icon-list-icon">
