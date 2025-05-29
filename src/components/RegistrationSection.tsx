@@ -26,7 +26,7 @@ const RegistrationSection: React.FC = () => {
           <div className="elementor-element elementor-element-39d58fc2 elementor-widget__width-initial elementor-widget elementor-widget-heading" data-id="39d58fc2" data-element_type="widget" data-widget_type="heading.default">
             <div className="elementor-widget-container">
               <h4 className="elementor-heading-title elementor-size-default text-xl font-medium mb-10 text-center">
-                Dia 31 de Maio, às 19h.
+                Dia 07 de Junho, às 19h.
               </h4>
             </div>
           </div>
