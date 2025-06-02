@@ -10,7 +10,6 @@ import { GuaranteeSection } from '@/components/GuaranteeSection';
 import { PricingSection } from '@/components/PricingSection';
 import { Footer } from '@/components/Footer';
 import MarketSection from "@/components/MarketSection";
-import CryptoTicker from '@/components/CryptoTicker';
 
 export default function Home() {
   // Analytics and optimization setup
@@ -86,7 +85,6 @@ export default function Home() {
   return (
     <main className="antialiased">
       <Header />
-      <CryptoTicker />
       <Hero />
       <MarketSection />
       <ProfilesSection />

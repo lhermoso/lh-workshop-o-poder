@@ -3,13 +3,11 @@ import { Inter, Montserrat, Orbitron } from "next/font/google";
 import "./globals.css";
 import React from 'react';
 import { ThemeProvider } from '@/contexts/ThemeContext';
-import { GoogleAnalytics, FacebookPixel, StructuredData } from '@/components/ScriptHead';
+import { GoogleAnalytics, StructuredData } from '@/components/ScriptHead';
 
 
-// Google Analytics ID - replace with your actual ID in production
-const GA_MEASUREMENT_ID = 'G-XXXXXXXXXX';
-// Facebook Pixel ID - replace with your actual ID in production
-const FB_PIXEL_ID = 'XXXXXXXXXX';
+// Google Analytics ID
+const GA_MEASUREMENT_ID = 'G-0T3E82D545';
 
 const inter = Inter({
   subsets: ["latin"],
@@ -50,7 +48,7 @@ export const metadata: Metadata = {
     description: 'Estratégia alternativa do mercado cripto com ganhos entre US$3 a US$25/dia a cada 1.000 dólares investidos.',
     images: ['/images/og-image.jpg'],
   },
-  metadataBase: new URL('https://workshop.leohermoso.com.br'),
+  metadataBase: new URL('https://poder.leohermoso.com.br'),
   alternates: {
     canonical: '/',
   },
@@ -65,7 +63,6 @@ export default function RootLayout({
     <html lang="pt-BR" className={`${inter.variable} ${montserrat.variable} ${orbitron.variable}`}>
       <head>
         <GoogleAnalytics id={GA_MEASUREMENT_ID} />
-        <FacebookPixel id={FB_PIXEL_ID} />
         <StructuredData />
         {/* Performance optimizations */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
