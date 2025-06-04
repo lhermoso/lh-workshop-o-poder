@@ -3,22 +3,60 @@
 @tailwind utilities;
 
 :root {
-  --primary: #ffdb4d;
-  /* Yellow for crypto theme */
-  --primary-dark: #e6c400;
-  --secondary: #2563eb;
-  /* Blue accent */
-  --text: #121212;
-  --background: #ffffff;
-  --background-alt: #f9fafb;
-  --accent: #5271ff;
+  --primary: #00f2fe;
+  /* Bright cyan */
+  --primary-dark: #00c6ff;
+  --secondary: #8e2de2;
+  /* Purple accent */
+  --accent: #7b3fe4;
+  /* Vivid purple */
+
+  /* Light Mode Text & Background */
+  --text-light: #1f2937;
+  /* Dark Gray for readability */
+  --background-light: #ffffff;
+  /* Clean white */
+  --background-alt-light: #f3f4f6;
+  /* Light gray for cards/sections */
+
+  /* Dark Mode Text & Background (already well-defined, but ensuring consistency) */
+  --text-dark: #f0f2f5;
+  /* Light gray/white for dark mode */
+  --background-dark: #0f1221;
+  /* Deep, dark blue/black */
+  --background-alt-dark: #171c34;
+  /* Slightly lighter dark for cards */
+
+  --crypto-gradient-start: #4b0082;
+  /* Indigo */
+  --crypto-gradient-end: #00f2fe;
+  /* Cyan */
+
+  --success: #0ecb81;
+  --error: #f6465d;
+  --warning: #ffb016;
+
+  /* Opacities for glassmorphism/hover effects */
+  --primary-opacity-10: rgba(0, 242, 254, 0.1);
+  --primary-opacity-20: rgba(0, 242, 254, 0.2);
+  --primary-opacity-30: rgba(0, 242, 254, 0.3);
+  --accent-opacity-10: rgba(123, 63, 228, 0.1);
+  --accent-opacity-20: rgba(123, 63, 228, 0.2);
+  --accent-opacity-30: rgba(123, 63, 228, 0.3);
 }
 
 body {
   @apply font-sans text-base antialiased;
-  background-color: var(--background);
-  color: var(--text);
+  /* Default to light mode colors, dark mode handled by class in layout.tsx */
+  background-color: var(--background-light);
+  color: var(--text-light);
   overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark body {
+  background-color: var(--background-dark);
+  color: var(--text-dark);
 }
 
 h1,
@@ -27,51 +65,151 @@ h3,
 h4,
 h5,
 h6 {
-  @apply font-montserrat font-bold tracking-tight;
+  /* Defaulting to Orbitron for a stronger crypto/futuristic feel */
+  @apply font-orbitron font-bold tracking-tight;
+  /* Color will be inherited or can be set specifically, e.g., text-primary */
+}
+
+/* Ensure links also adapt to dark mode */
+a {
+  @apply text-primary hover:text-primary-dark dark:text-primary dark:hover:text-primary-dark transition-colors duration-200;
 }
 
 @layer components {
   .container-wide {
-    @apply container mx-auto px-4 max-w-7xl;
+    @apply container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
   }
 
   .btn-primary {
-    @apply bg-primary text-text font-bold py-3 px-6 rounded-md uppercase tracking-wide transition-all hover:bg-primary-dark hover:shadow-lg transform hover:-translate-y-1 font-montserrat text-lg;
+    /* Base styles for light mode */
+    @apply bg-primary text-[var(--background-dark)] font-bold py-3 px-6 rounded-md uppercase tracking-wider transition-all hover:shadow-glow font-montserrat text-lg border-2 border-transparent hover:border-primary-dark;
+    /* Dark mode styles */
+    @apply dark:bg-primary dark:text-[var(--background-dark)] dark:hover:border-primary-dark;
+  }
+
+  .btn-secondary {
+    @apply bg-transparent text-primary border-2 border-primary font-bold py-3 px-6 rounded-md uppercase tracking-wider transition-all hover:bg-primary hover:text-[var(--background-dark)] font-montserrat text-lg;
+    @apply dark:text-primary dark:border-primary dark:hover:bg-primary dark:hover:text-[var(--background-dark)];
   }
 
   .section {
     @apply py-16 md:py-24;
+    /* Ensure sections adapt background in dark mode if they have their own specific bg */
   }
 
   .section-header {
-    @apply text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-center;
+    /* Orbitron is now default for h tags, so font-orbitron is redundant here but kept for clarity */
+    @apply font-orbitron text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-center bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent;
+    /* Dark mode doesn't require specific changes here as gradient text is universal */
   }
 
   .section-subheader {
-    @apply text-2xl md:text-3xl font-semibold mb-6;
+    @apply font-orbitron text-2xl md:text-3xl font-semibold mb-6;
+    /* Adapt text color for dark mode */
+    @apply text-gray-700 dark:text-gray-300;
   }
 
   .highlight {
-    @apply text-accent font-bold;
+    @apply text-primary font-bold;
+    /* Dark mode doesn't change primary highlight color typically */
+  }
+
+  .crypto-card {
+    @apply rounded-xl border p-6 transition-all backdrop-blur-sm;
+    /* Light mode card */
+    @apply bg-[var(--background-alt-light)] border-[var(--primary-opacity-20)] hover:shadow-glow;
+    /* Dark mode card */
+    @apply dark:bg-[var(--background-alt-dark)] dark:border-[var(--primary-opacity-20)] dark:hover:shadow-glow;
+  }
+
+  .glass-effect {
+    @apply border rounded-xl backdrop-blur-md;
+    /* Light mode glass */
+    @apply bg-white/30 border-white/20;
+    /* Dark mode glass */
+    @apply dark:bg-gray-800/30 dark:border-gray-700/20;
+  }
+
+  .crypto-gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(to right, var(--crypto-gradient-start), var(--crypto-gradient-end));
+  }
+
+  /* New utility class */
+  .glow-on-hover {
+    @apply transition-all duration-300;
+  }
+
+  .glow-on-hover:hover {
+    box-shadow: 0 0 15px 2px var(--primary-opacity-30), 0 0 20px 5px var(--accent-opacity-20);
+    /* Example for dark mode specific glow if needed, or make variables themeable */
+  }
+
+  .dark .glow-on-hover:hover {
+    box-shadow: 0 0 18px 3px var(--primary-opacity-30), 0 0 25px 6px var(--accent-opacity-20);
   }
 }
 
-/* Animation for CTA buttons */
+/* Animations (pulse, float) remain largely the same but ensure colors used are themeable or universal */
+
 @keyframes pulse {
 
   0%,
   100% {
     transform: scale(1);
-    box-shadow: 0 0 0 rgba(255, 219, 77, 0.7);
+    box-shadow: 0 0 0 rgba(0, 242, 254, 0.4);
+    /* Using primary with alpha */
   }
 
   50% {
     transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(255, 219, 77, 0.9);
+    box-shadow: 0 0 20px var(--primary-opacity-30), 0 0 10px var(--accent-opacity-20);
+    /* Combined glow */
   }
 }
 
 .btn-cta {
   @apply btn-primary;
-  animation: pulse 2s infinite;
+  animation: pulse 2.5s infinite;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+  /* Text color should contrast well; btn-primary already handles this */
+}
+
+.dark .btn-cta {
+  /* Ensure CTA pulse shadow is visible in dark mode if different colors needed */
+  /* animation properties are inherited, but if shadows need specific dark mode colors, redefine keyframes or use CSS vars */
+}
+
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.blockchain-grid {
+  /* Use themeable colors for the grid lines */
+  background-image:
+    linear-gradient(var(--primary-opacity-10) 1px, transparent 1px),
+    linear-gradient(90deg, var(--primary-opacity-10) 1px, transparent 1px);
+  background-size: 25px 25px;
+  /* Slightly larger grid */
+  background-position: center center;
+}
+
+.dark .blockchain-grid {
+  /* Optionally, slightly different color/opacity for dark mode grid */
+  background-image:
+    linear-gradient(var(--primary-opacity-20) 1px, transparent 1px),
+    linear-gradient(90deg, var(--primary-opacity-20) 1px, transparent 1px);
 }
