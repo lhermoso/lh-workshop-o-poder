@@ -44,7 +44,7 @@ export const PricingSection: React.FC = () => {
                                     </div>
                                     <h3 className="text-2xl font-bold crypto-gradient-text">Workshop Exclusivo</h3>
                                 </div>
-                                <p className="text-xl text-gray-600 dark:text-gray-400">Dia 014 de Junho, das 9h às 12h | <span className="bg-warning/10 text-warning px-2 py-1 rounded-md text-sm">Vagas Limitadas</span></p>
+                                <p className="text-xl text-gray-600 dark:text-gray-400">Dia 14 de Junho, das 9h às 12h | <span className="bg-warning/10 text-warning px-2 py-1 rounded-md text-sm">Vagas Limitadas</span></p>
                             </div>
 
                             <div className="relative p-8">

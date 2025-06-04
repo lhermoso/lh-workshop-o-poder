@@ -45,7 +45,7 @@ export const Hero: React.FC = () => {
                             <div className="flex flex-col md:flex-row gap-4 text-lg glass-effect p-4 backdrop-blur text-gray-700 dark:text-gray-200">
                                 <div className="flex items-center gap-2">
                                     <div className="w-6 h-auto rounded-full bg-success flex items-center justify-center text-background-dark font-bold">✓</div>
-                                    <span>Dias 014 de Junho</span>
+                                    <span>Dias 14 de Junho</span>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <div className="w-6 h-6 rounded-full bg-success flex items-center justify-center text-background-dark font-bold">✓</div>
