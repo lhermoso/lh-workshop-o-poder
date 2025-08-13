@@ -14,7 +14,7 @@ export const PricingSection: React.FC = () => {
             setIsLoading(false);
             // Get utm_source from current URL, default to 'insta'
             const utmSource = searchParams.get('utm_source') || 'insta';
-            router.push(`https://chk.eduzz.com/E9OO6PXQ9B?utm_source=${utmSource}`);
+            router.push(`https://sun.eduzz.com/E9OO6PXQ9B?utm_source=${utmSource}`);
         }, 300);
     };
 
@@ -44,7 +44,7 @@ export const PricingSection: React.FC = () => {
                                     </div>
                                     <h3 className="text-2xl font-bold crypto-gradient-text">Workshop Exclusivo</h3>
                                 </div>
-                                <p className="text-xl text-gray-600 dark:text-gray-400">Dia 28 de Junho, das 9h às 12h | <span className="bg-warning/10 text-warning px-2 py-1 rounded-md text-sm">Vagas Limitadas</span></p>
+                                <p className="text-xl text-gray-600 dark:text-gray-400">Dia 23 de Agosto, das 9h às 12h | <span className="bg-warning/10 text-warning px-2 py-1 rounded-md text-sm">Vagas Limitadas</span></p>
                             </div>
 
                             <div className="relative p-8">

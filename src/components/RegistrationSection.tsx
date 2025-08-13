@@ -26,7 +26,7 @@ const RegistrationSection: React.FC = () => {
           <div className="elementor-element elementor-element-39d58fc2 elementor-widget__width-initial elementor-widget elementor-widget-heading" data-id="39d58fc2" data-element_type="widget" data-widget_type="heading.default">
             <div className="elementor-widget-container">
               <h4 className="elementor-heading-title elementor-size-default text-xl font-medium mb-10 text-center">
-                Dia 28 de Junho, às 19h.
+                Dia 23 de Agosto, às 9h.
               </h4>
             </div>
           </div>
@@ -58,7 +58,7 @@ const RegistrationSection: React.FC = () => {
               <div className="elementor-element elementor-element-7fd620 elementor-mobile-align-center elementor-align-center elementor-widget elementor-widget-button" id="botao-checkout" data-id="7fd620" data-element_type="widget" data-widget_type="button.default">
                 <div className="elementor-widget-container p-8 pt-0">
                   <div className="elementor-button-wrapper">
-                    <Link href="https://chk.eduzz.com/E9OO6PXQ9B" id="#Oferta" className="elementor-button elementor-button-link elementor-size-sm block w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-lg text-center transition-colors">
+                    <Link href="https://sun.eduzz.com/E9OO6PXQ9B" id="#Oferta" className="elementor-button elementor-button-link elementor-size-sm block w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-lg text-center transition-colors">
                       <span className="elementor-button-content-wrapper">
                         <span className="elementor-button-text">QUERO MINHA VAGA</span>
                       </span>
